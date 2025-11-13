@@ -1,3 +1,6 @@
+
+**Updated for 2025**
+
 Welcome to the Cadbury Chocolate Hunter repository! Here you'll find a script designed to track down those elusive Cadbury chocolate giveaways before they slip through your fingers faster than a piece of Dairy Milk on a hot day.
 
 Overview
