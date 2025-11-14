@@ -7,9 +7,11 @@ Overview
 This Python script uses web scraping techniques to check if the Cadbury promotional URLs from starfreebies.co.uk are still live or if they've redirected to the dreaded "missed-out" page. If a URL hasn't hit the "missed-out" status, it opens the page in your default web browser, ready for you to claim your chocolatey treasure.
 
 Features
-Automatic URL Checking: The script checks a list of URLs periodically.
-Redirect Detection: Identifies whether the URL has redirected to a "missed-out" page or not.
-Browser Integration: Automatically opens valid URLs in your web browser for immediate access. 
+- Automatic URL Checking: The script checks a list of URLs periodically.
+- Redirect Detection: Identifies whether the URL has redirected to a "missed-out" page or not.
+- Browser Integration: Automatically opens valid URLs in your web browser for immediate 
+access. 
+- Discord webhook alert: Allow you to get notified as soon as a valid link found! (optional)
 
 Usage
 To start your Cadbury quest, simply run the script:
@@ -17,7 +19,7 @@ To start your Cadbury quest, simply run the script:
 bash
 python3 cadbury_hunter.py
 
-The script will continuously check the URLs every minute. Here's what happens:
+The script will continuously check the URLs every minute by default. Here's what happens:
 
 If a URL does not redirect to "missed-out", it will open in your web browser.
 If a URL has already been claimed or there's an error, it will log this in the console.
@@ -36,6 +38,10 @@ def check_redirect(url):
         # ... rest of the function
     except requests.RequestException as e:
         return False, str(e)
+
+DISCORD WEBHOOK USAGE:
+In line 47 of choco.py remove the # in front of send()
+in update.py enter ur webhook url in line 3 where is says to do so.
 
 Contributing
 Feel free to fork this repository and submit pull requests if you:

@@ -1,6 +1,7 @@
 import requests
 import time
 import webbrowser
+from update import send
  
 urls = [
     "https://secretsanta.cadbury.co.uk/code/a1008e92-b95d-4e13-a86e-fce60450ec7d",
@@ -43,6 +44,7 @@ def monitor_links(interval=60):
 
             # Otherwise open the working one
             print(f"✅ Found active link: {final_url}")
+            #send(f"✅ Found active link: {final_url}")
             webbrowser.open(final_url)
 
         # Wait before next check
