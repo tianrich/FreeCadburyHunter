@@ -1,1 +1,3 @@
-requests
+pip install playwright playwright-stealth  # stealth is optional but helps
+playwright install chromium
+python cadbury_monitor.py
