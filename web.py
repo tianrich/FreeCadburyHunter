@@ -121,7 +121,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 @app.get("/", response_class=HTMLResponse)
 async def dashboard():
     try:
-        with open("static/index.html", "r", encoding="utf-8") as f:
+        with open("index.html", "r", encoding="utf-8") as f:
             return f.read()
     except FileNotFoundError:
         return "<h1 style='color:#f59e0b;background:#0a0e27;padding:100px;text-align:center;'>Place index.html in /static folder</h1>"
